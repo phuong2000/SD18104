@@ -1,0 +1,81 @@
+28-30/9: Chấm Ass1-Lab1-4
+10-12/10: Chấm Ass2-lab cong lại
+
+
+Nội dung học
+Các lớp có phụ thuộc vào nhau
+thay vì gọi nhiều 
+
+Tạo project:
+-Tạo tên thư mục 
+-Trong file pom.xml phải có hai đường link trong nhóm
+-application bên trong phải có: spring.mvc.view.prefix=/views/ ( tiền tố ) 
+spring.mvc.view.suffix=.jsp ( Hậu tố )
+
+
+Entity sẽ ánh xạ vào DB lấy ra dữ liệu
+Repository truy xuất dữ liệu trong DB
+req từ người dùng sẽ chọc vào controller
+Controller trả ra kết quả cho JSP -> resp
+
+
+Các annotation sẽ ánh xạ vào url với các phương thức riêng
+
+Buổi 2:
+1,Các annotation của @RequestMapping
+@RequestMapping chỉ định đuòng dẫn url, method và ánh xạ tới các phương thức của từng controller
+@RequestParams quy định tham số khi query vào tùng get hay post
+
+Buổi 3:
+Tạo danh sách trả về
+B1: Tạo list() Controller
+	add 2 obj
+B2: Tạo index()
+	@GetMapping
+	return "index.jsp"
+	model
+B3: trong index.jsp
+	load lên table
+
+
+Hàm public Str store()
+@ModelAttribute("nv") NVReq req
+bốc toàn bộ dữa liệu từ from vào req: from (data)-> nv req
+Đưa đối tượng vào model để chuyển qua views: nvReq -> model
+
+Buổi 4:
+
+hibernate-validator doc
+
+Buổi 5:
+@GetMapping(delete/{ma}): {ma} ở đây là giá trị động biểu thị cho các giá trị có sẵn trong model
+Nên ta dùng delete(@PathVariable("ma"))
+String maNV
+
+
+Buổi 9:Spring bean 
+- Bean là một class public, có getter setter, contructor không tham số
+- Lõi của bean là IOC container
+- Để dùng spring bean ta có @Autuwired
+- @Controller nhiệm vụ: khởi tạo một object, nạp object vừa tạo vào IOC container
+- @Primary chỉ tạo được một đối tượng
+- @Qualifier
+
+
+
+
+
+Github thầy T: https://github.com/TienNH21/FA23B1_SOF3021_SD18104/blob/master/src/main/webapp/views/nhan_vien/edit.jsp
+
+Github database: https://github.com/dungna29/PTPM_FPOLY_TAINGUYEN_SOF205_SOF2041/blob/main/1.%20Database%20%26%20Ch%E1%BB%A9c%20N%C4%83ng%20B%C3%A1n%20H%C3%A0ng/FINALASS_FPOLYSHOP_FA22_SOF205__SOF2041_18092022.sql        
+
+Angular: https://www.youtube.com/playlist?list=PLRhlTlpDUWswOJnLxzotd7MgqaRrBlZOG
+
+https://refactoring.guru/
+
+
+
+
+
+
+
